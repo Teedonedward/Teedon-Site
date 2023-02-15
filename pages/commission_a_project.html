@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Commission a Project</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../CSS/style.css" type="text/CSS"/>
+        <script src="https://kit.fontawesome.com/81f98f93bc.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div class="header">
+            <nav class="navbar">
+                <ul>
+                    <li>Menu
+                       <div class="drop-down-menu">
+                       <ul>
+                            <li><i class="fa-solid fa-warehouse"></i><span>Architecture</span></li>
+                            <li><i class="fa-solid fa-bars-progress"></i><span>Engineering</span></li>
+                            <li><i class="fa-solid fa-trowel-bricks"></i><span>Construction</span></li>
+                            <li><i class="fa-solid fa-building-shield"></i><span>Projects</span></li>
+                            <li><i class="fa-solid fa-road-barrier"></i><span>Blog</span></li>
+                       </ul>
+                       </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="site-logo">
+                <a href="index.html">
+                    <img src="../images/logo.jpg" alt="Teedon logo" />
+                </a>
+            </div>
+            <div class="sign-in">
+            <a href="pages/sign-In">Sign In</a>
+            </div>
+        </div>
+        <div class="form-field-construction">
+            <form class="architectural-request-form"action="" method="get" accept-charset="utf-8">
+                <h2>Fill the form to commission a project</h2>
+                <br></br>
+                <h3><label>Personal information</label></h3>
+                <div class="name-title">
+                    <input type="text" name="title" id="title" placeholder="title" />
+                </div>
+                <div class="full-name">
+                    <input type="text" name="name" id="name" placeholder="Full Name" />
+                    <p>*as appeared in survey plan and other relivant documents*</p>
+                </div>
+                <div class="gender">
+                    <div class="male">
+                        <input type="radio" name="gender" id="male" value="male" />
+                        <p>Male</p>
+                    </div>
+                    <div class="female">
+                    <input type="radio" name="gender" id="female" value="female" />
+                    <p>Female</p>
+                    </div>
+                </div>
+                <input type="email" name="email" id="email" placeholder="email" />
+                <input type="number" name="number" id="number" placeholder="phone number" />
+                <br></br>
+                <div class="address">
+                    <div class="label">
+                    <h3><label>Project Location</label></h3>
+                    </div>
+                    <div class="label">
+                    <label for="country">Country</label>
+                    </div>
+                    <div class="country">
+                    <select name="country" id="country" class="select-country">
+                        <option value="nigeria">Nigeria</option>
+                        <option value="united-kingdom">United Kingdom (UK)</option>
+                        <option value="united-states-of-america">United States of America(USA)</option>
+                        <option value="south-africa">South Africa</optoption>
+                        <option value="brazil">Brazil</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="Spain">Spain</option>
+                        <option value="italy">Italy</option>
+                        <option value="france">France</optoption>
+                        <option value="rwanda">Rwanda</option>
+                        <option value="ghana">Ghana</option>
+                        <option value="belgium">Belgium</option>
+                    </select>
+                    </div>
+                    <div class="label">
+                    <label for="state">State</label>
+                    </div>
+                    <div class="State">
+                    <select name="State" id="state" class="select-state">
+                        <option value="abuja">Abuja</option>
+                        <option value="anambra">Anambra</option>
+                        <option value="benue">Benue</option>
+                        <option value="plateau">Plateau</option>
+                        <option value="oyo">Oyo</option>
+                        <option value="lagos">Lagos</option>
+                        <option value="ogun">Ogun</option>
+                    </select>
+                    </div>
+                    <div>
+                    <input type="text" name="address" id="address" placeholder="address" />
+                    </div>
+                </div>
+                <br></br>
+                <div class="design-information">
+                    <h3><label>Project Information</label></h3>
+                    <div>
+                    <label for="type-of-project">Type of project</label>
+                    <input type="text" name="project-type" id="project-type" value="" />
+                    </div>
+                    <div>
+                    <label>Scope of project</label>
+                    <input type="text" name="project-scope" id="project-scope" value="project-scope" />
+                    </div>
+                </div>
+                <br></br>
+                <h3><label>Project Scope</label></h3>
+                <div class="checkbox">
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="construction" id="construction" value="construction" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Construction</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="design" id="design" value="design" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Design</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="renovation" id="renovation" value="renovation" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Renovation</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="routine-maintenance" id="routine-maintenance" value="routine-maintenance" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Routine maintenance</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="project-management" id="project-management" value="project-management" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Project management</p>
+                    </div>
+                <div class="brief-note">
+                    <div>
+                    <label for="message">Brief</label>
+                    </div>
+                    <div>
+                    <textarea name="brief" id="brief" placeholder="describe project details and scope here" ></textarea>
+                    </div>
+                </div>
+                <div class="terms-and-conditions-agreement">
+                     <label class="check">
+                        <input type="checkbox" name="terms-and-conditions-agreement" id="terms-and-conditions-agreement" value="" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>Agree to Teedon's terms and conditions</p>
+                </div>
+                <input type="submit" name="submit" id="submit" value="submit" />
+            </form>
+        </div>
+        <div class="footer">
+            <div class="footer_sd">
+                <div class="reach-out">
+                    <ul>
+                        <li><a href="pages/about_us.html">About Us</a></li>
+                        <li><a href="pages/contact_us.html">Contact Us</a></li>
+                        <li><a href="pages/work_with_us.html">Work with Us</a></li>
+                    </ul>
+                </div>
+                <div class="explore">
+                    <ul>
+                        <li><a href="projects">Projects</a></li>
+                        <li><a href="blogs">Blogs</a></li>
+                        <li><a href="terms_and_conditions">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="follow-us">
+                    <p>Follow us on our social media platforms</p>
+                    <ul>
+                        <li><a href="https://facebook.com/teedonedward"><i class="fa-brands fa-facebook-square"></i></a></li>
+                        <li><a href="https://twitter.com/teedon_org"><i class="fa-brands fa-twitter-square"></i></a></li>
+                        <li><a href="https://instagram.com/teedonedward"><i class="fa-brands fa-instagram-square"></i></a></li>
+                        <li><a href="https://YouTube.com/channel/UCkNGil3huxYkQK-cvjjA9vw"><i class="fa-brands fa-youtube-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                     <p>Teedon© 2022</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

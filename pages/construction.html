@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Architecture</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../CSS/style.css" type="text/CSS"/>
+        <script src="https://kit.fontawesome.com/81f98f93bc.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div class="header">
+            <nav class="navbar">
+                <ul>
+                    <li>Menu
+                       <div class="drop-down-menu">
+                           <div class="ddm">
+                               <ul>
+                                    <li><i class="fa-solid fa-warehouse"></i><span>Architecture</span></li>
+                                    <li><i class="fa-solid fa-bars-progress"></i><span>Engineering</span></li>
+                                    <li><i class="fa-solid fa-trowel-bricks"></i><span>Construction</span></li>
+                                    <li><i class="fa-solid fa-building-shield"></i><span>Projects</span></li>
+                                    <li><i class="fa-solid fa-road-barrier"></i><span>Blog</span></li>
+                               </ul>
+                           </div>
+                       </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="site-logo">
+                <a href="index.html">
+                    <img src="../images/logo.jpg" alt="Teedon logo" />
+                </a>
+            </div>
+            <div class="sign-in">
+            <a href="pages/sign-In">Sign In</a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search"/>
+                <a class="Search-btn"href="#"><i class="fas fa-search"></i></a>
+        </div>
+        <div class="quick-service">
+            <ul id="services">
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="engineering.html">Engineering</a></li>
+                <li><a href="#">Construction</a></li>
+            </ul>
+        </div>
+        <div class="intro-text-construct">
+            <p>Teedon offers diverse construction services ranging from general construction, renovations, maintenance, project management and  supervision amongst other construction services. Our capacity is only limited by our clients requirements. Kindly fill the form below to request for any of our construction services.</p>
+        </div>
+        <div class="button">
+                <a href="../pages/commission_a_project.html">Commission a Project</a>
+            </div>
+        <div class="architectural-services">
+            <div class="consultation">
+                <img src="../images/icons/plan-design.png" alt="consultation" />
+                <span><h2>Consult with an expert</h2></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="planning-design">
+                <img src="../images/icons/plan-design.png" alt="Project management" />
+                <span><h2>Project Management/Supervision</h2></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="Project-supervision">
+                <img src="../images/icons/plan-design.png" alt="Project supervision" />
+                <span><h2>Routine Maintenance</h2></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="3D-rendering">
+                <img src="../images/icons/plan-design.png" alt="3D Rendering" />
+                <span><h2>General Construction</h2></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="form-field-construction">
+            <form class="construction-request-form"action="" method="get" accept-charset="utf-8">
+                <h2>Fill the form to Commission a construction Project</h2>
+                <br></br>
+                <input type="text" name="title" id="title" placeholder="title" />
+                <br></br>
+                <input type="text" name="name" id="name" placeholder="Full Name" />
+                <br></br>
+                <input type="email" name="email" id="email" placeholder="email" />
+                <br></br>
+                <input type="number" name="number" id="number" placeholder="phone number" />
+                <br></br>
+                <label for="location">Project Location</label>
+                <select name="location" id="location" class="select-location">
+                    <option value="abuja">Abuja</option>
+                    <option value="anambra">Anambra</option>
+                    <option value="benue">Benue</option>
+                    <option value="plateau">Plateau</option>
+                    <option value="oyo">Oyo</option>
+                    <option value="lagos">Lagos</option>
+                    <option value="ogun">Ogun</option>
+                </select>
+                <br></br>
+                <label for="">Select one or more of the services needed</label>
+                <div class="checkbox">
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="Construction" id="Construction" value="Construction" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>construction</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="Renovation" id="Renovation" value="Renovation" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Renovation</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="Project-supervision" id="Project-supervision" value="Project-supervision" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Project supervision</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="Project-management" id="Project-management" value="Project-management" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Project Management</p>
+                    </div>
+                </div>
+                <label for="message">Brief</label>
+                <textarea name="brief" id="brief" placeholder="describe the project details and scope here" ></textarea>
+                <div class="terms-and-conditions-agreement">
+                     <label class="check">
+                        <input type="checkbox" name="terms-and-conditions-agreement" id="terms-and-conditions-agreement" value="" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>Agree to Teedon's terms and conditions</p>
+                </div>
+                <input type="submit" name="submit" id="submit" value="submit" />
+            </form>
+        </div>
+        <div class="email-subscription">
+            <p class="email-text">Enter your email for weekly updates on new designs, projects and investments</p>
+            <input type="email" name="email" class="enter-email" value="" />
+            <input type="submit" name="submit" class="submit" value="submit" />
+        </div>
+        <div class="footer">
+            <div class="footer_sd">
+                <div class="reach-out">
+                    <ul>
+                        <li><a href="pages/about_us.html">About Us</a></li>
+                        <li><a href="pages/contact_us.html">Contact Us</a></li>
+                        <li><a href="pages/work_with_us.html">Work with Us</a></li>
+                    </ul>
+                </div>
+                <div class="explore">
+                    <ul>
+                        <li><a href="projects">Projects</a></li>
+                        <li><a href="blogs">Blogs</a></li>
+                        <li><a href="terms_and_conditions">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="follow-us">
+                    <p>Follow us on our social media platforms</p>
+                    <ul>
+                        <li><a href="https://facebook.com/teedonedward"><i class="fa-brands fa-facebook-square"></i></a></li>
+                        <li><a href="https://twitter.com/teedon_org"><i class="fa-brands fa-twitter-square"></i></a></li>
+                        <li><a href="https://instagram.com/teedonedward"><i class="fa-brands fa-instagram-square"></i></a></li>
+                        <li><a href="https://YouTube.com/channel/UCkNGil3huxYkQK-cvjjA9vw"><i class="fa-brands fa-youtube-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                     <p>Teedon© 2022</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

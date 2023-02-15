@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>About Teedon</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../CSS/style.css" type="text/CSS"/>
+        <script src="../Scripts/app.js"></script>
+        <script src="https://kit.fontawesome.com/81f98f93bc.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div class="header">
+            <nav class="navbar">
+                <ul>
+                    <li>Menu
+                       <div class="drop-down-menu">
+                       <ul>
+                            <li><i class="fa-solid fa-warehouse"></i><span>Architecture</span></li>
+                            <li><i class="fa-solid fa-bars-progress"></i><span>Engineering</span></li>
+                            <li><i class="fa-solid fa-trowel-bricks"></i><span>Construction</span></li>
+                            <li><i class="fa-solid fa-building-shield"></i><span>Projects</span></li>
+                            <li><i class="fa-solid fa-road-barrier"></i><span>Blog</span></li>
+                       </ul>
+                       </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="site-logo">
+                <a href="index.html">
+                    <img src="../images/logo.jpg" alt="Teedon logo" />
+                </a>
+            </div>
+            <div class="sign-in">
+            <a href="pages/sign-In">Sign In</a>
+            </div>
+        </div>
+        <div class="form-field-architecture">
+            <form class="architectural-request-form"action="" method="get" accept-charset="utf-8">
+                <h2>Fill the form to request for an Architectural design</h2>
+                <br></br>
+                <h3><label>Personal information</label></h3>
+                <div class="name-title">
+                    <input type="text" name="title" id="title" placeholder="title" />
+                </div>
+                <div class="full-name">
+                    <input type="text" name="name" id="name" placeholder="Full Name" />
+                    <p>*as appeared in survey plan and other relivant documents*</p>
+                </div>
+                <div class="gender">
+                    <div class="male">
+                        <input type="radio" name="gender" id="male" value="male" />
+                        <p>Male</p>
+                    </div>
+                    <div class="female">
+                    <input type="radio" name="gender" id="female" value="female" />
+                    <p>Female</p>
+                    </div>
+                </div>
+                <input type="email" name="email" id="email" placeholder="email" />
+                <input type="number" name="number" id="number" placeholder="phone number" />
+                <br></br>
+                <div class="address">
+                    <div class="label">
+                    <h3><label>Address</label></h3>
+                    </div>
+                    <div class="label">
+                    <label for="country">Country</label>
+                    </div>
+                    <div class="country">
+                    <select name="country" id="country" class="select-country">
+                        <option value="">country</option>
+                    </select>
+                    </div>
+                    <div class="label">
+                    <label for="state">State</label>
+                    </div>
+                    <div class="State">
+                    <select name="State" id="state" class="select-state">
+                        <option value="">state</option>
+                    </select>
+                    </div>
+                    <div class="label">
+                        <label for="City">City</label>
+                        </div>
+                        <div class="City">
+                        <select name="City" id="City" class="select-city">
+                            <option value="">City</option>
+                        </select>
+                        </div>
+                    <div>
+                    <input type="text" name="address" id="address" placeholder="address" />
+                    </div>
+                </div>
+                <br></br>
+                <div class="design-information">
+                    <h3><label>Design Information</label></h3>
+                    <div>
+                    <label for="type-of-design">Type of design</label>
+                    <input type="text" name="design-type" id="design-type" value="" />
+                    </div>
+                    <div>
+                    <label>Number of floors</label>
+                    <input type="number" name="number-of-floors" id="number-of-floors" value="number-of-floors" />
+                    </div>
+                    <div>
+                    <label>Number of rooms</label>
+                    <input type="number" name="number-of-rooms" id="number-of-rooms" value="number-of-rooms" />
+                    </div>
+                </div>
+                <br></br>
+                <h3><label>Other design amenities</label></h3>
+                <div class="checkbox">
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="swimming-pool" id="swimming-pool" value="swimming-pool" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Swimming pool</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="fountain" id="fountain" value="fountain" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Fountain</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="aquarium" id="aquarium" value="aquarium" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Aquarium</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="indoor-garage" id="indoor-garage" value="indoor-garage" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Indoor garage</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="walk-in-closet" id="walk-in-closet" value="walk-in-closet" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Walk in closet</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="private-family-lounge" id="private-family-lounge" value="private-family-lounge" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Private family lounge</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="media-room_cinema" id="media-room_cinema" value="media-room_cinema" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Media room/cinema</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="utility-store" id="utility-store" value="utility-store" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Utility store</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="prayer-room_meditation-room_zen-garden" id="prayer-room_meditation-room_zen-garden" value="prayer-room_meditation-room_zen-garden" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Prayer room/meditation room/Zen garden</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="study-office" id="study-office" value="study-office" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Study/Office</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="penthouse-suite" id="penthouse-suite" value="penthouse-suite" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Penthouse/suite</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="elevator" id="elevator" value="elevator" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Elevator</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="courtyard" id="courtyard" value="courtyard" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Courtyard</p>
+                    </div>
+                </div>
+                <h3><label>Other design requests</label></h3>
+                <div class="checkbox">
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="structural-drawings_design" id="structural-drawings_design" value="structural-drawings_design" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Structural drawings/design</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="plumbing-layouts_diagrams" id="plumbing-layouts_diagrams" value="plumbing-layouts_diagrams" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Plumbing layouts/diagrams</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="electrical-layouts_diagrams" id="electrical-layouts_diagrams" value="electrical-layouts_diagrams" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Electrical layouts and diagrams</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="check">
+                            <input type="checkbox" name="3D-rendering" id="3D-rendering" value="3D-rendering" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>3D Rendering</p>
+                    </div>
+                </div>
+                <input type="number" name="number-of-renderings" id="number-of-renderings" placeholder="number of renderings" />
+                <br></br>
+                <div class="brief-note">
+                    <div>
+                    <label for="message">Brief</label>
+                    </div>
+                    <div>
+                    <textarea name="brief" id="brief" placeholder="you can further explain your brief here and specify other things you would like included in the design" ></textarea>
+                    </div>
+                </div>
+                <div class="terms-and-conditions-agreement">
+                     <label class="check">
+                        <input type="checkbox" name="terms-and-conditions-agreement" id="terms-and-conditions-agreement" value="" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>Agree to Teedon's terms and conditions</p>
+                </div>
+                <input type="submit" name="submit" id="submit" value="submit" />
+            </form>
+        </div>
+        <div class="footer">
+            <div class="footer_sd">
+                <div class="reach-out">
+                    <ul>
+                        <li><a href="pages/about_us.html">About Us</a></li>
+                        <li><a href="pages/contact_us.html">Contact Us</a></li>
+                        <li><a href="pages/work_with_us.html">Work with Us</a></li>
+                    </ul>
+                </div>
+                <div class="explore">
+                    <ul>
+                        <li><a href="projects">Projects</a></li>
+                        <li><a href="blogs">Blogs</a></li>
+                        <li><a href="terms_and_conditions">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="follow-us">
+                    <p>Follow us on our social media platforms</p>
+                    <ul>
+                        <li><a href="https://facebook.com/teedonedward"><i class="fa-brands fa-facebook-square"></i></a></li>
+                        <li><a href="https://twitter.com/teedon_org"><i class="fa-brands fa-twitter-square"></i></a></li>
+                        <li><a href="https://instagram.com/teedonedward"><i class="fa-brands fa-instagram-square"></i></a></li>
+                        <li><a href="https://YouTube.com/channel/UCkNGil3huxYkQK-cvjjA9vw"><i class="fa-brands fa-youtube-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                     <p>Teedon© 2022</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
