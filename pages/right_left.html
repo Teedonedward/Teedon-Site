@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Right-Left</title>
@@ -21,92 +22,83 @@
         background: var(--lite-Grey);
     }
 
-:root {
+    :root {
         --Gold: #A57C00;
         --White: #fff;
         --Black: #000;
         --Dark-Grey: #4f4f4f;
         --lite-Grey: #f4f4f4;
         --Grey: #555555;
-        --Transparent-Gold: rgba(165,124,0,0.05);
+        --Transparent-Gold: rgba(165, 124, 0, 0.05);
     }
 
     .header {
         display: flex;
+        top: 0;
+        width: 100%;
         height: 65px;
         margin: 0 auto;
         justify-content: center;
         align-items: center;
         background: var(--Dark-Grey);
+        box-shadow: 0 3px 5px var(--Black);
+        z-index: 10;
     }
 
     .site-logo {
-        width: 100%;
+        width: 100px;
         float: center;
         justify-content: center;
         align-items: center;
-        margin: 30px auto;
+        margin: 0 auto;
+        margin-left: 0;
     }
 
     .site-logo img {
+        width: 100%;
         margin: auto;
         justify-content: center;
         align-items: center;
-        height: 30px;
     }
 
     .navbar {
         display: flex;
         margin: 0px auto;
+        margin-right: 0;
     }
 
     .navbar ul {
         display: flex;
+        width: 550px;
         margin: 0 auto;
-        border-radius: 6px;
         align-items: center;
     }
 
     .navbar ul li {
         padding: 10px;
         list-style-type: none;
-        text-decoration: none;
-        color: var(--White);
-        font-size: 10px;
-        text-align: center;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
     }
 
     .navbar ul li a {
-        color: var(--Gold);
+        color: var(--White);
         font-weight: bold;
         font-size: 10px;
-        text-align: right;
+        text-align: center;
         text-decoration: none;
         cursor: pointer;
         padding: 10px;
     }
 
-    .navbar ul li:hover {
+    .navbar ul li a:hover {
         color: var(--Gold);
         font-size: 11px;
         cursor: pointer;
         padding: 11px;
         border-radius: 6px;
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .navbar ul li a:hover {
-        color: var(--White);
-        font-size: 11px;
-        cursor: pointer;
-        padding: 11px;
-        border-radius: 6px;
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
-        transition: all 0.5s ease-in-out;
+        transition: all 400ms ease-in-out;
     }
 
     .fa-solid {
@@ -124,23 +116,28 @@
         width: 100%;
         overflow: hidden;
     }
+
     .product-images {
         display: flex;
         width: 100%;
         overflow: hidden;
     }
+
     .product-images img {
         width: 100%;
-        transition: all 0.15s ease;
+        transition: all 750ms ease-in-out;
     }
+
     .product-images input {
         display: none;
     }
+
     .product-navigation {
         display: flex;
         justify-content: center;
         margin: 5px;
     }
+
     .product-navigation label {
         height: 10px;
         width: 10px;
@@ -150,19 +147,24 @@
         transition: all 0.15s ease;
         margin: 5px;
     }
+
     .product-navigation label:hover {
         background: var(--Gold);
     }
-    #img1:checked ~ .m1 {
+
+    #img1:checked~.m1 {
         margin-left: -100%;
     }
-    #img2:checked ~ .m2 {
+
+    #img2:checked~.m2 {
         margin-left: -200%;
     }
-    #img3:checked ~ .m3 {
+
+    #img3:checked~.m3 {
         margin-left: -300%;
     }
-    #img4:checked ~ .m4 {
+
+    #img4:checked~.m4 {
         margin-left: -400%;
     }
 
@@ -253,7 +255,9 @@
         align-items: center;
     }
 
-    .check, .checkbox, .check {
+    .check,
+    .checkbox,
+    .check {
         width: 15px;
         height: 15px;
         position: relative;
@@ -262,14 +266,16 @@
         margin: 5px;
     }
 
-    .check input[type="checkbox"], .checkbox .check input[type="checkbox"] {
+    .check input[type="checkbox"],
+    .checkbox .check input[type="checkbox"] {
         position: absolute;
         top: 0;
         left: 0;
         opacity: 0;
     }
 
-    .check .checkmark, .checkbox .check .checkmark {
+    .check .checkmark,
+    .checkbox .check .checkmark {
         width: 15px;
         height: 15px;
         border: 1px solid var(--Gold);
@@ -279,7 +285,8 @@
         background: var(--White);
     }
 
-    .check .checkmark:before, .checkbox .check .checkmark:before {
+    .check .checkmark:before,
+    .checkbox .check .checkmark:before {
         content: "";
         position: absolute;
         top: 3px;
@@ -292,11 +299,13 @@
         display: none;
     }
 
-    .check input[type="checkbox"]:checked ~ .checkmark, .checkbox .check input[type="checkbox"]:checked ~ .checkmark {
+    .check input[type="checkbox"]:checked~.checkmark,
+    .checkbox .check input[type="checkbox"]:checked~.checkmark {
         background: var(--lite-Grey);
     }
 
-    .check input[type="checkbox"]:checked ~ .checkmark:before, .checkbox .check input[type="checkbox"]:checked ~ .checkmark:before {
+    .check input[type="checkbox"]:checked~.checkmark:before,
+    .checkbox .check input[type="checkbox"]:checked~.checkmark:before {
         display: block;
     }
 
@@ -309,7 +318,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
-        "image1 image2 image3 image4";
+            "image1 image2 image3 image4";
         width: 100%;
         justify-content: center;
         margin: auto;
@@ -352,8 +361,8 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
-        "reach-out explore follow-us"
-        "copyright copyright copyright";
+            "reach-out explore follow-us"
+            "copyright copyright copyright";
         width: 100%;
         padding-top: 30px;
         background: rgba(0, 0, 0, 0.85);
@@ -447,23 +456,23 @@
         padding: 10px;
         margin-top: 20px;
     }
-
 </style>
+
 <body>
     <div class="header">
         <div class="site-logo">
-            <a href="index.html">
+            <a href="../index.html">
                 <img src="../images/logo.jpg" alt="Teedon logo" />
             </a>
         </div>
         <nav class="navbar">
             <ul>
-                <li>Architecture</li>
-                <li>Engineering</li>
-                <li>Construction</li>
-                <li>Projects</li>
-                <li>Blog</li>
-                <li><a href="pages/sign-In">Sign In</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="engineering.html">Engineering</a></li>
+                <li><a href="construction.html">Construction</a></li>
+                <li><a href="about_us.html">Projects</a></li>
+                <li><a href="work_with_us.html">Blog</a></li>
+                <li><a href="sign-In">Sign In</a></li>
             </ul>
         </nav>
     </div>
@@ -474,8 +483,8 @@
             <input type="radio" name="slide" id="img3">
             <input type="radio" name="slide" id="img4">
 
-            <img src="../images/designs/Right-left/Right_left-3D view 2.jpg" class="m2" alt="img1">
-            <img src="../images/designs/Right-left/right-left.jpg" class="m1" alt="img2">
+            <img src="../images/designs/Right-left/Right_left-3D view 2.jpg" class="m1" alt="img1">
+            <img src="../images/designs/Right-left/right-left.jpg" class="m2" alt="img2">
             <img src="../images/designs/Right-left/Right_left-3D view 3.jpg" class="m3" alt="img3">
             <img src="../images/designs/Right-left/Right_left-3D view 5.jpg" class="m4" alt="img4">
         </div>
@@ -522,7 +531,8 @@
         <div class="formats">
             <div class="checkbox-item">
                 <label class="check">
-                    <input type="checkbox" name="architectural-drawings" id="architectural-drawings" value="architectural-drawings" />
+                    <input type="checkbox" name="architectural-drawings" id="architectural-drawings"
+                        value="architectural-drawings" />
                     <span class="checkmark"></span>
                 </label>
                 <p>
@@ -531,7 +541,8 @@
             </div>
             <div class="checkbox-item">
                 <label class="check">
-                    <input type="checkbox" name="engineering-drawings-calculation-sheets" id="engineering-drawings-calculation-sheets" value="engineering-drawings-calculation-sheets" />
+                    <input type="checkbox" name="engineering-drawings-calculation-sheets"
+                        id="engineering-drawings-calculation-sheets" value="engineering-drawings-calculation-sheets" />
                     <span class="checkmark"></span>
                 </label>
                 <p>
@@ -540,7 +551,8 @@
             </div>
             <div class="checkbox-item">
                 <label class="check">
-                    <input type="checkbox" name="mechanical-drawings" id="mechanical-drawings" value="mechanical-drawings" />
+                    <input type="checkbox" name="mechanical-drawings" id="mechanical-drawings"
+                        value="mechanical-drawings" />
                     <span class="checkmark"></span>
                 </label>
                 <p>
@@ -549,7 +561,8 @@
             </div>
             <div class="checkbox-item">
                 <label class="check">
-                    <input type="checkbox" name="electrical-drawings" id="electrical-drawings" value="electrical-drawings" />
+                    <input type="checkbox" name="electrical-drawings" id="electrical-drawings"
+                        value="electrical-drawings" />
                     <span class="checkmark"></span>
                 </label>
                 <p>
@@ -605,16 +618,18 @@
     <div class="notice">
         <span>Note:</span>
         <p>
-            All designs by default comes with, Plans, Elevations, Sections, Details, Door/Window schedules and at least three 3D renderings. All other drawing formats including Engineering, Mechanical, Electrical, Plumbing, HVAC and CAD formats are provided at additional cost
+            All designs by default comes with, Plans, Elevations, Sections, Details, Door/Window schedules and at least
+            three 3D renderings. All other drawing formats including Engineering, Mechanical, Electrical, Plumbing, HVAC
+            and CAD formats are provided at additional cost
         </p>
     </div>
     <div class="footer">
         <div class="footer_sd">
             <div class="reach-out">
                 <ul>
-                    <li><a href="pages/about_us.html">About Us</a></li>
-                    <li><a href="pages/contact_us.html">Contact Us</a></li>
-                    <li><a href="pages/work_with_us.html">Work with Us</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="work_with_us.html">Work with Us</a></li>
                 </ul>
             </div>
             <div class="explore">
@@ -629,10 +644,13 @@
                     Follow us on our social media platforms
                 </p>
                 <ul>
-                    <li><a href="https://facebook.com/teedonedward"><i class="fa-brands fa-facebook-square"></i></a></li>
+                    <li><a href="https://facebook.com/teedonedward"><i class="fa-brands fa-facebook-square"></i></a>
+                    </li>
                     <li><a href="https://twitter.com/teedon_org"><i class="fa-brands fa-twitter-square"></i></a></li>
-                    <li><a href="https://instagram.com/teedonedward"><i class="fa-brands fa-instagram-square"></i></a></li>
-                    <li><a href="https://YouTube.com/channel/UCkNGil3huxYkQK-cvjjA9vw"><i class="fa-brands fa-youtube-square"></i></a></li>
+                    <li><a href="https://instagram.com/teedonedward"><i class="fa-brands fa-instagram-square"></i></a>
+                    </li>
+                    <li><a href="https://YouTube.com/channel/UCkNGil3huxYkQK-cvjjA9vw"><i
+                                class="fa-brands fa-youtube-square"></i></a></li>
                 </ul>
             </div>
             <div class="copyright">
@@ -643,4 +661,5 @@
         </div>
     </div>
 </body>
+
 </html>

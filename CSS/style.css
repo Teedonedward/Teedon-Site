@@ -29,8 +29,8 @@ body {
 }
 
 .button {
-    width: 100%;
     margin: 10px auto;
+    padding: 20px;
     border-radius: 6px;
     text-align: center;
     align-items: center;
@@ -51,84 +51,77 @@ body {
     background: var(--Grey);
     color: var(--Gold);
     box-shadow: 1px 1px 5px var(--Black);
+    transition: all 350ms ease-in-out;
 }
 
 .header {
+    position: fixed;
     display: flex;
+    top: 0;
+    width: 100%;
     height: 65px;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
     background: var(--Dark-Grey);
+    box-shadow: 0 3px 5px var(--Black);
+    z-index: 10;
 }
 
 .site-logo {
-    width: 100%;
+    width: 100px;
     float: center;
     justify-content: center;
     align-items: center;
-    margin: 30px auto;
+    margin: 0 auto;
+    margin-left: 0;
 }
 
 .site-logo img {
+    width: 100%;
     margin: auto;
     justify-content: center;
     align-items: center;
-    height: 30px;
 }
 
 .navbar {
     display: flex;
     margin: 0px auto;
+    margin-right: 0;
 }
 
 .navbar ul {
     display: flex;
+    width: 550px;
     margin: 0 auto;
-    border-radius: 6px;
     align-items: center;
 }
 
 .navbar ul li {
     padding: 10px;
     list-style-type: none;
-    text-decoration: none;
-    color: var(--White);
-    font-size: 10px;
-    text-align: center;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
 .navbar ul li a {
-    color: var(--Gold);
+    color: var(--White);
     font-weight: bold;
     font-size: 10px;
-    text-align: right;
+    text-align: center;
     text-decoration: none;
     cursor: pointer;
     padding: 10px;
 }
 
-.navbar ul li:hover {
+.navbar ul li a:hover {
     color: var(--Gold);
     font-size: 11px;
     cursor: pointer;
     padding: 11px;
     border-radius: 6px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
-    transition: all 0.5s ease-in-out;
-}
-
-.navbar ul li a:hover {
-    color: var(--White);
-    font-size: 11px;
-    cursor: pointer;
-    padding: 11px;
-    border-radius: 6px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
-    transition: all 0.5s ease-in-out;
+    transition: all 400ms ease-in-out;
 }
 
 .search-bar {
@@ -140,6 +133,7 @@ body {
   border: none;
   padding: 50px 100px;
   margin: 5 auto;
+  margin-top: 60px;
   outline: none;
   background: var(--Lite-Grey);
 }
@@ -162,7 +156,8 @@ body {
 .search-bar input:focus {
   border: 1px solid var(--Gold);
   box-shadow: inset 2px 2px 2px rgba(94, 104, 123, 0.288),
-    inset -0.5px -0.5px 2px var(--Grey);
+            inset -0.5px -0.5px 2px var(--Grey);
+  transition: all 350ms ease-in-out;
 }
 
 .search-bar a {
@@ -189,6 +184,7 @@ body {
 .search-bar a:hover {
   color: var(--White);
   background: var(--Dark-Grey);
+  transition: all 350ms ease-in-out;
 }
 
 #suggestions {
@@ -235,7 +231,8 @@ body {
     right: 0;
     padding: 25px 50px;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    isolation: isolate;
+    transition: all 550ms ease-in-out;
   }
 
   .carousel-item h1 {
@@ -254,6 +251,7 @@ body {
     display: inline-block;
     padding: 12px;
   }
+  
   .arrow-prev {
     left: 30px;
     position: absolute;
@@ -266,8 +264,11 @@ body {
     top: 50%;
   }
 
-  .carousel-overlay {
-    background: rgba(0, 0, 0, 0.904);
+  .carousel-item::after {
+    content: "";
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.904);
+    z-index: -2;
   }
 
   [id^= "item"] {
@@ -311,6 +312,7 @@ body {
     width: 100%;
     margin: 0 auto;
     justify-content: center;
+    align-items: center;
 }
 
 .intro-text p {
@@ -320,13 +322,14 @@ body {
     text-align: justify;
     align-items: center;
     justify-content: center;
-    margin: 15px;
+    margin: 35px 50px;
     border: 2px solid var(--Gold);
 }
 
 .text-img {
     position: relative;
     margin: 0 auto;
+    margin-top: 40px;
     padding: 0;
     background-image: url('../images/designs_background.jpg');
     background-size: cover;
@@ -334,7 +337,6 @@ body {
 
 .text-img img {
     width: 60%;
-    margin-top: 20px;
 }
 
 .text-img:before {
@@ -469,7 +471,7 @@ body {
 
 .designed {
     display: flex;
-    overflow: auto;
+    overflow-x: auto;
 }
 
 .featured-designs span {
@@ -494,45 +496,36 @@ body {
 }
 
 .design {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-    "d-img d-img d-img d-img"
-    "title title title title"
-    "price-tag price-tag price-tag price-tag"
-    "download-btn download-btn download-btn download-btn"
-    "details details details details"
-    "details details details details";
-    width: 90%;
-    margin: 5px 5px 30px 30px;
-    background: var(--White);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    background: var(--lite-Grey);
 }
 
 .design:hover {
-    width: 95%;
-    transition: all 0.5s ease-in;
-    box-shadow: 0.5px 0.5px 5px var(--Dark-Grey),
-                -0.5px -0.5px 5px var(--Dark-Grey);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    border: 1px solid var(--Gold);
+    background: var(--lite-Grey);
+    transition: all 400ms ease-in-out;
 }
 
 .design img {
-    grid-area: d-img;
     width: 100%;
 }
 
 .design h1 {
-    grid-area: title;
-    background: none;
     padding: 1px;
-    text-align: center;
+    text-align: left;
     color: var(--Black);
-    text-shadow: none;
 }
 
 .design h2 {
-    grid-area: price-tag;
     padding: 1px;
-    text-align: center;
+    text-align: left;
     font-size: 5px;
     align-items: top;
     justify-content: center;
@@ -550,7 +543,6 @@ body {
 }
 
 .design h3 {
-    grid-area: download-btn;
     padding: 5px;
     margin: 0 90px;
     border-radius: 6px;
@@ -573,29 +565,26 @@ body {
     margin: 0 50px;
     font-size: 18px;
     font-weight: bold;
-    transition: all 0.5s ease-in;
     background: none;
     border-radius: 6px;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
 }
 
 .details {
-    grid-area: details;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
     padding: 5px;
-    justify-content: center;
-    align-items: center;
 }
 
 .details h4 {
-    width: 50%;
-    padding: 2px;
+    flex-basis: 2;
+    padding: 5px 10px;
     line-height: 20px;
     color: var(--Grey);
-    text-align: center;
+    text-align: left;
 }
 
 .more {
@@ -609,7 +598,7 @@ body {
 }
 
 .more a {
-    flex-basis: 50%;
+    flex-basis: 35%;
     text-decoration: none;
     color: var(--White);
     background: var(--Gold);
@@ -621,10 +610,11 @@ body {
     font-weight: bold;
 }
 
-.more:hover a {
+.more a:hover {
     background: var(--Grey);
     color: var(--Gold);
     box-shadow: 1px 1px 5px var(--Black);
+    transition: all 300ms ease-in-out;
 }
 
 .rvt {
@@ -638,7 +628,7 @@ body {
 }
 
 .rvt a {
-    flex-basis: 33%;
+    flex-basis: 30%;
     text-decoration: none;
     color: var(--White);
     background: #0053FF;
@@ -650,10 +640,11 @@ body {
     font-weight: bold;
 }
 
-.rvt:hover a {
+.rvt a:hover {
     background: var(--Grey);
     color: var(--Gold);
     box-shadow: 1px 1px 5px var(--Black);
+    transition: all 300ms ease-in-out;
 }
 
 .bottom {
@@ -711,7 +702,7 @@ body {
 
 .enter-email:focus {
     box-shadow: inset 1px 1px 3px var(--Grey);
-    
+    transition: all 350ms ease-in-out;
 }
 
 .submit {
@@ -733,6 +724,8 @@ body {
     color: var(--Gold);
     background: var(--Grey);
     box-shadow: 1px 1px 3px var(--Black);
+    cursor: pointer;
+    transition: all 350ms ease-in-out;
 }
 
 .footer {
@@ -776,6 +769,11 @@ body {
     font-size: 15px;
 }
 
+.reach-out li a:hover {
+    color: var(--Gold);
+    transition: all 200ms ease-in-out;
+}
+
 .explore {
     display: flex;
     flex-direction: column;
@@ -795,6 +793,11 @@ body {
     padding: 10px;
     font-size: 15px;
     text-align: center;
+}
+
+.explore li a:hover {
+    color: var(--Gold);
+    transition: all 200ms ease-in-out;
 }
 
 .follow-us {
@@ -825,6 +828,11 @@ body {
     padding: 5px;
     font-size: 10px;
     text-align: center;
+}
+
+.follow-us li a:hover {
+    color: var(--Gold);
+    transition: all 200ms ease-in-out;
 }
 
 .fa-brands {
@@ -980,12 +988,20 @@ body {
     font-size: 20px;
 }
 
+.abt {
+    display: flex;
+    width: 100%;
+    margin: 10px auto;
+    padding: 0 20px;
+}
+
 .abt-archi, .abt-engine, .abt-construct {
     display: flex;
     flex-direction: column;
     position: none;
     width: 100%;
     padding: 10px;
+    margin: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -1377,15 +1393,6 @@ body {
 
 /* Architecture */
 
-.architectural-services {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 5px auto;
-    justify-content: center;
-    align-items: center;
-}
-
 .intro-text-archi {
     display: flex;
     background: url(../images/atrium.jpg);
@@ -1408,18 +1415,22 @@ body {
 }
 
 .architectural-services {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-    "consultation planning-design project-supervision 3D-rendering";
+    width: 100%;
+    display: flex;
+    width: 100%;
+    margin: 10px auto;
+    padding: 20px 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .consultation, .planning-design, .3D-rendering, .project-supervision {
     background: rgba(0, 0, 0, 0.5);
     display: flex;
+    width: 100%;
     flex-direction: column;
-    padding: 20px;
-    margin: 0px auto;
+    margin: auto;
+    padding: 0 20px;
     color: var(--Grey);
     justify-content: center;
     align-items: center;
@@ -1458,6 +1469,7 @@ body {
 .form-field-architecture {
     width: 100%;
     padding: 20px 0px;
+    margin-top: 50px;
     background: url(../images/architecture_background.jpg);
     background-size: cover;
 }
@@ -1717,6 +1729,12 @@ body {
     border-radius: 6px;
 }
 
+#submit:hover {
+    background: var(--Dark-Grey);
+    color: var(--Gold);
+    transition: all 350ms ease-in-out;
+}
+
 @media (max-width: 991px)
 {
     .intro-text-archi {
@@ -1961,7 +1979,8 @@ body {
 
 .form-field-construction {
     width: 100%;
-    padding: 20px 0px;;
+    padding: 20px 0px;
+    margin-top: 50px;
     background: url(../images/building_1.jpg);
     background-position: center;
 }
