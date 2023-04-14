@@ -45,13 +45,15 @@ body {
     border-radius: 6px;
     font-size: 20px;
     font-weight: bold;
+    transition: all 250ms ease-in-out;
 }
 
 .button:hover a {
-    background: var(--Grey);
+    background-color: #2b2b2bb9;
+    background-blend-mode: darken;
     color: var(--Gold);
-    box-shadow: 1px 1px 5px var(--Black);
-    transition: all 350ms ease-in-out;
+    box-shadow: 1px 1px 5px var(--Black),
+                -1px -3px 5px var(--Black);
 }
 
 .header {
@@ -119,7 +121,7 @@ body {
 .navbar ul li a {
     color: var(--White);
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 0.1em;
     text-align: center;
     text-decoration: none;
@@ -133,8 +135,6 @@ body {
     font-size: 11px;
     cursor: pointer;
     padding: 11px;
-    border-radius: 6px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
 }
 
 .search-bar {
@@ -193,11 +193,14 @@ body {
 
 .search-bar i {
   color: var(--White);
-  font-size: 25px;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 3px var(--Black);
+  margin-top: 10px;
 }
 
 .search-bar a:hover {
-  color: var(--White);
+  color: var(--Gold);
   background: var(--Dark-Grey);
 }
 
@@ -235,7 +238,6 @@ body {
     width: 100%;
     display: block;
     margin: 0 auto;
-    background-color: var(--lite-Grey);
   }
   
   .carousel-item {
@@ -247,7 +249,7 @@ body {
     padding: 25px 50px;
     opacity: 0;
     isolation: isolate;
-    transition: all 550ms ease-in-out;
+    transition: all 350ms ease-in-out;
   }
 
   .carousel-item h1 {
@@ -256,6 +258,8 @@ body {
     color: var(--Gold);
     top: 100px;
     left: 50px;
+    isolation: isolate;
+    z-index: 10;
   }
 
   .arrow{
@@ -265,25 +269,20 @@ body {
     border-radius: 50%;
     display: inline-block;
     padding: 12px;
+    isolation: isolate;
+    z-index: 10;
   }
   
   .arrow-prev {
     left: 30px;
     position: absolute;
     top: 50%;
-  
   }
+
   .arrow-next {
     right: 30px;
     position: absolute;
     top: 50%;
-  }
-
-  .carousel-item::after {
-    content: "";
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.904);
-    z-index: -2;
   }
 
   [id^= "item"] {
@@ -291,15 +290,16 @@ body {
   }
 
   .item-1 {
-    z-index: 2;
     opacity: 1;
     background: url('../images/archi-slide.jpg');
     background-size: cover;
   }
+
   .item-2 {
     background: url('../images/engine-slide.jpg');
     background-size: cover;
   }
+
   .item-3 {
     background: url('../images/construction-slide.jpg');
     background-size: cover;
@@ -395,9 +395,10 @@ body {
     content: "";
     position: absolute;
     left: 0;
+    bottom: 0;
     margin-left: -4px;
     width: 75%;
-    height: 75%;
+    height: 55%;
     padding: 10px;
     border-bottom-left-radius: 15px;
     border-left: 4px solid var(--Gold);
@@ -405,9 +406,10 @@ body {
 }
 
 .things_we_do i {
-    font-size: 40px;
+    font-size: 30px;
     padding: 5px;
-    color: var(--Grey);
+    color: #000000d5;
+    mix-blend-mode: multiply;
     text-align: center;
 }
 
@@ -452,44 +454,20 @@ body {
 
 .featured-designs {
     display: flex;
-    flex-direction: row;
     width: 100%;
-    padding: 20px 0px;
     margin: 0;
+    margin-bottom: 20px;
     background: var(--lite-Grey);
 }
 
-.featured-header {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
 .featured-designs h1 {
+    width: 350px;
     color: var(--Gold);
     padding: 10px;
-    padding-left: 20px;
+    padding-left: 40px;
     text-shadow: 1px 1px 3px var(--Black);
     background: rgba(0, 0, 0, 0.6);
-    background-blend-mode: screen;
-}
-
-.divider {
-    border: none;
-    border-top: 3px solid var(--Gold);
-    margin: 0 auto;
-    padding: 0;
-    box-shadow: 0.5px 0.5px 5px var(--Black);
-    animation: expand 3s ease-in;
-}
-
-@keyframes expand {
-    0% {
-        width: 10%;
-    }
-    100% {
-        width: 100%;
-    }
+    background-blend-mode: multiply;
 }
 
 .designed {
@@ -506,8 +484,10 @@ body {
 
 .featured-designs p {
     color: var(--Dark-Grey);
-    margin: 0 auto;
+    margin-top: 5px;
     padding: 10px;
+    justify-content: center;
+    align-items: center;
     font-size: 15px;
     padding-left: 20px;
 }
@@ -526,6 +506,7 @@ body {
     background-image: linear-gradient(45deg, #0000000e, rgba(0, 153, 255, 0.103), #dfb75825, #dfb7588c);
     background-blend-mode: multiply;
     border-radius: 15px;
+    cursor: pointer;
     transition: all 250ms ease-in-out;
 }
 
@@ -551,6 +532,7 @@ body {
     padding: 5px;
     text-align: center;
     font-size: 22px;
+    cursor: pointer;
     color: var(--Black);
 }
 
@@ -563,8 +545,9 @@ body {
 }
 
 .design h2 i {
-    font-size: 20px;
+    font-size: 16px;
     color: rgba(0, 0, 0, 0.7);
+    padding-right: 0.1em;
 }
 
 .design h2 span {
@@ -593,7 +576,7 @@ body {
     display: flex;
     width: 100%;
     margin: 20px auto;
-    padding: 10px;
+    padding: 10px 350px;
     background: var(--lite-Grey);
     justify-content: center;
     align-items: center;
@@ -607,23 +590,25 @@ body {
     border-radius: 6px;
     text-align: center;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 20px;
     font-size: 15px;
     font-weight: bold;
+    transition: all 250ms ease-in-out;
 }
 
 .more a:hover {
-    background: var(--Grey);
+    background: #2b2b2bb9;
+    background-blend-mode: darken;
     color: var(--Gold);
-    box-shadow: 1px 1px 5px var(--Black);
-    transition: all 300ms ease-in-out;
+    box-shadow: 1px 1px 5px var(--Black),
+                -1px -3px 5px var(--Black);
 }
 
 .rvt {
     display: flex;
     width: 100%;
     margin: 20px auto;
-    padding: 10px;
+    padding: 10px 300px;
     background: var(--lite-Grey);
     justify-content: center;
     align-items: center;
@@ -637,16 +622,17 @@ body {
     border-radius: 6px;
     text-align: center;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 20px;
     font-size: 15px;
     font-weight: bold;
+    transition: all 250ms ease-in-out;
 }
 
 .rvt a:hover {
-    background: var(--Grey);
+    background: #2b2b2bb9;
     color: var(--Gold);
-    box-shadow: 1px 1px 5px var(--Black);
-    transition: all 300ms ease-in-out;
+    box-shadow: 1px 1px 5px var(--Black),
+                -1px -3px 5px var(--Black);
 }
 
 .bottom {
@@ -769,11 +755,11 @@ body {
     color: var(--White);
     padding: 10px;
     font-size: 15px;
+    transition: all 200ms ease-in-out;
 }
 
 .reach-out li a:hover {
     color: var(--Gold);
-    transition: all 200ms ease-in-out;
 }
 
 .explore {
@@ -799,7 +785,7 @@ body {
 
 .explore li a:hover {
     color: var(--Gold);
-    transition: all 200ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 
 .follow-us {
@@ -832,14 +818,16 @@ body {
     text-align: center;
 }
 
-.follow-us li a:hover {
-    color: var(--Gold);
-    transition: all 200ms ease-in-out;
-}
-
 .fa-brands {
     color: var(--Gold);
     font-size: 30px;
+    transition: all 250ms ease-in-out;
+}
+
+.fa-brands:hover {
+    border: 0.5px solid var(--Gold);
+    border-radius: 5px;
+    color: #000000c4;
 }
 
 .copyright {
@@ -1277,7 +1265,7 @@ body {
     padding: 5px 0;
 }
 
-/* Contact Us */
+/* Work with Us */
 
 .work-with-us-header {
     width: 100%;
@@ -1413,7 +1401,8 @@ body {
     color: var(--White);
     border-radius: 6px;
     padding: 25px;
-    background: rgba(0, 0, 0, 0.5);
+    background: #00000098;
+    background-blend-mode: multiply;
 }
 
 .architectural-services {
@@ -1424,6 +1413,7 @@ body {
     padding: 20px 10px;
     justify-content: center;
     align-items: center;
+    background-color: var(--White);
 }
 
 .consultation, .planning-design, .3D-rendering, .project-supervision {
@@ -1469,11 +1459,25 @@ body {
 }
 
 .form-field-architecture {
+    position: relative;
     width: 100%;
     padding: 20px 0px;
     margin-top: 50px;
     background: url(../images/architecture_background.jpg);
     background-size: cover;
+    isolation: isolate;
+}
+
+.form-field-architecture::after {
+    position: absolute;
+    width: 100%;
+    height: 990px;
+    top: 0;
+    left: 0;
+    content: "";
+    background-image: linear-gradient(45deg, #000000bd, rgba(2, 42, 70, 0.712), #dfb7583a, #271c01da);
+    background-blend-mode: multiply;
+    z-index: -1;
 }
 
 .name-title {
@@ -1482,12 +1486,17 @@ body {
     margin: 5px 0;
 }
 
+#email, #number {
+    width: 50%;
+}
+
 .architectural-request-form {
     display: flex;
     flex-direction: column;
     width: 80%;
-    background: rgba(79, 79, 79, 0.9);
-    padding: 20px;
+    background: #000000b9;
+    background-blend-mode: multiply;
+    padding: 20px 50px;
     margin: 20px auto;
     border-radius: 6px;
     box-shadow: 2px 2px 5px var(--Black);
@@ -1495,17 +1504,38 @@ body {
 
 .architectural-request-form h2 {
     justify-content: left;
-    text-align: left;
+    text-align: center;
     color: var(--Gold);
     padding-bottom: 5px;
+    margin-bottom: 20px;
     border-bottom: 2px solid var(--Gold);
+}
+
+.architectural-request-form label {
+    color: var(--Gold);
+    font-size: 15px;
+    align-items: top;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .architectural-request-form input {
     padding: 5px;
-    border-radius: 6px;
     outline: none;
+    background: none;
+    color: var(--White);
     border: none;
+    margin: 5px 0px;
+    margin-right: 300px;
+    border-bottom: 1px solid var(--Gold);
+}
+
+.architectural-request-form input:focus {
+    background: #ffffff09;
+    color: var(--White);
+    outline: none;
+    border: 1px solid var(--Lite-Grey);
+    border-radius: 5px;
 }
 
 .full-name {
@@ -1536,10 +1566,6 @@ body {
 
 .female {
     padding-left: 10px;
-}
-
-#email, #number {
-    margin: 5px 0;
 }
 
 .address {
@@ -1599,19 +1625,15 @@ body {
     height: 150px;
     padding: 5px;
     border-radius: 6px;
+    font-size: 15px;
+    color: var(--Grey);
     outline: none;
     border: none;
-    font-size: 10px;
 }
 
-.architectural-request-form input:focus, .architectural-request-form textarea:focus, .select:focus {
-    border: 1px solid var(--Gold);
-}
-
-.architectural-request-form label {
-    color: var(--Gold);
+.architectural-request-form textarea:focus, .select:focus {
     font-size: 15px;
-    align-items: top;
+    border: 1px solid var(--Gold);
 }
 
 .select-location {
@@ -1635,14 +1657,6 @@ body {
 .design-information {
     display: flex;
     flex-direction: column;
-    width: 100%;
-}
-
-.design-information label {
-    font-size: 13px;
-}
-
-.design-information input {
     width: 100%;
 }
 

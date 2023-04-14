@@ -177,13 +177,13 @@
     .design-description h1 {
         color: var(--Dark-Grey);
         text-align: center;
-        margin: 20px 0;
+        margin: 10px 0;
     }
 
     .design-specs {
         display: flex;
         width: 100%;
-        margin: 0 auto;
+        margin: 10px auto;
         justify-content: center;
         align-items: center;
     }
@@ -193,7 +193,9 @@
     .number-of-bathrooms,
     .others,
     .type {
-        background: var(--Gold);
+        background-image: linear-gradient(45deg, #0000001f, #dfb75818, #1ca2db07, #fa934409);
+        mix-blend-mode: multiply;
+        color: var(--Gold);
         border-radius: 6px;
         padding: 10px;
         margin: auto;
@@ -202,6 +204,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        box-shadow: 2px 2px 4px var(--Grey);
     }
 
     .download {
@@ -214,6 +217,8 @@
         margin: 0 auto;
         justify-content: center;
         text-align: center;
+        cursor: pointer;
+        transition: all 250ms ease-in-out;
     }
 
     .download:hover {
@@ -222,8 +227,8 @@
         background: var(--Dark-Grey);
         padding: 12px;
         margin: 0 auto;
-        transition: all 600ms ease-in-out;
-        cursor: pointer;
+        box-shadow: 1px 1px 3px var(--Black),
+        -1px -2px 5px var(--Black);
     }
 
     .design-info {
