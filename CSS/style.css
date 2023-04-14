@@ -55,17 +55,16 @@ body {
 }
 
 .header {
-    position: fixed;
+    position: relative;
     display: flex;
     top: 0;
     width: 100%;
-    height: 65px;
+    height: 150px;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    background: var(--Dark-Grey);
-    box-shadow: 0 3px 5px var(--Black);
-    z-index: 10;
+    border-bottom: 1px solid var(--Gold);
+    box-shadow: 0px 1px 3px var(--Black);
 }
 
 .site-logo {
@@ -74,7 +73,16 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-left: 0;
+    margin-left: 100px;
+}
+
+.nav-video {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .site-logo img {
@@ -87,31 +95,37 @@ body {
 .navbar {
     display: flex;
     margin: 0px auto;
-    margin-right: 0;
+    margin-right: 100px;
 }
 
 .navbar ul {
     display: flex;
-    width: 550px;
+    width: 700px;
     margin: 0 auto;
     align-items: center;
 }
 
 .navbar ul li {
     padding: 10px;
+    margin: 0 5px;
     list-style-type: none;
     align-items: center;
     justify-content: center;
+    border-radius: 15px;
+    background-color: #00000080;
+    background-blend-mode: multiply;
 }
 
 .navbar ul li a {
     color: var(--White);
     font-weight: bold;
-    font-size: 10px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     padding: 10px;
+    transition: all 250ms ease-in-out;
 }
 
 .navbar ul li a:hover {
@@ -121,7 +135,6 @@ body {
     padding: 11px;
     border-radius: 6px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
-    transition: all 400ms ease-in-out;
 }
 
 .search-bar {
@@ -133,31 +146,32 @@ body {
   border: none;
   padding: 50px 100px;
   margin: 5 auto;
-  margin-top: 60px;
   outline: none;
   background: var(--Lite-Grey);
 }
 
 .search-bar input {
   border-radius: 10px;
-  color: var(--Grey);
+  color: var(--Gold);
   font-size: 12px;
+  letter-spacing: 0.2em;
   width: 100%;
   height: 40px;
   padding: 10px;
   margin-right: 10px;
-  background: var(--White);
+  background: #020202a4;
+  background-blend-mode: multiply;
   outline: none;
-  border: none;
-  box-shadow: 3px 3px 2px rgba(94, 104, 123, 0.288),
-    -0.5px -0.5px 2px var(--Grey);
+  border: 1px solid #ffffffa2;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.795);
+  transition: all 200ms ease-in-out;
 }
 
 .search-bar input:focus {
+  font-size: 13px;
+  letter-spacing: 0.2em;
   border: 1px solid var(--Gold);
-  box-shadow: inset 2px 2px 2px rgba(94, 104, 123, 0.288),
-            inset -0.5px -0.5px 2px var(--Grey);
-  transition: all 350ms ease-in-out;
+  box-shadow: inset 2px 2px 5px #000;
 }
 
 .search-bar a {
@@ -173,6 +187,7 @@ body {
   align-items: center;
   text-align: center;
   margin-left: -50px;
+  transition: all 250ms ease-in-out;
   /*border: 1px solid var(--Dark-Grey);*/
 }
 
@@ -184,7 +199,6 @@ body {
 .search-bar a:hover {
   color: var(--White);
   background: var(--Dark-Grey);
-  transition: all 350ms ease-in-out;
 }
 
 #suggestions {
@@ -220,7 +234,8 @@ body {
     position: relative;
     width: 100%;
     display: block;
-    margin: 0 auto ;
+    margin: 0 auto;
+    background-color: var(--lite-Grey);
   }
   
   .carousel-item {
@@ -313,6 +328,7 @@ body {
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+    background-color: var(--lite-Grey);
 }
 
 .intro-text p {
@@ -361,7 +377,8 @@ body {
 .plan-design, .stay-on-budget, .professional, .integrity, .peace-of-mind, .stability {
     position: relative;
     width: 33%;
-    background: rgba(0, 0, 0, 0.15);
+    background-image: linear-gradient(60deg, #0000001f, #dfb75818, #1ca2db07, #fa934409);
+    background-blend-mode: multiply;
     display: flex;
     flex-direction: column;
     padding: 15px 0;
@@ -370,6 +387,7 @@ body {
     margin: 15px 30px;
     margin-right: -5px;
     color: var(--Grey);
+    border-radius: 15px;
     align-items: top;
 }
 
@@ -381,6 +399,7 @@ body {
     width: 75%;
     height: 75%;
     padding: 10px;
+    border-bottom-left-radius: 15px;
     border-left: 4px solid var(--Gold);
     border-bottom: 4px solid var(--Gold);
 }
@@ -415,16 +434,20 @@ body {
 
 .text h1 {
     border: 3px solid var(--Gold);
-    padding: 10px;
-    background: var(--Grey);
-    color: var(--White);
+    border-radius: 15px;
+    padding: 10px 30px;
+    background-image: linear-gradient(60deg, #0000001f, #dfb75818, #1ca2db07, #fa934409);
+    color: var(--Dark-Grey);
 }
 
 .text p {
-    padding: 10px;
-    border: 3px solid var(--lite-Grey);
+    padding: 15px;
+    text-shadow: 1px 1px 2px var(--Grey);
     background: var(--lite-Grey);
+    background-blend-mode: multiply;
     align-items: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .featured-designs {
@@ -499,8 +522,11 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 10px;
-    background: var(--lite-Grey);
+    margin: 10px;
+    background-image: linear-gradient(45deg, #0000000e, rgba(0, 153, 255, 0.103), #dfb75825, #dfb7588c);
+    background-blend-mode: multiply;
+    border-radius: 15px;
+    transition: all 250ms ease-in-out;
 }
 
 .design:hover {
@@ -509,24 +535,29 @@ body {
     width: 100%;
     margin: 10px;
     border: 1px solid var(--Gold);
+    border-radius: 15px;
     background: var(--lite-Grey);
-    transition: all 400ms ease-in-out;
+    box-shadow: 1px 2px 5px var(--Black),
+                -1px -1px 5px var(--Black);
 }
 
 .design img {
-    width: 100%;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px var(--Black);
 }
 
 .design h1 {
-    padding: 1px;
-    text-align: left;
+    padding: 5px;
+    text-align: center;
+    font-size: 22px;
     color: var(--Black);
 }
 
 .design h2 {
     padding: 1px;
-    text-align: left;
-    font-size: 5px;
+    text-align: center;
+    font-size: 10px;
     align-items: top;
     justify-content: center;
 }
@@ -537,38 +568,9 @@ body {
 }
 
 .design h2 span {
-    font-size: 20px;
+    font-size: 15px;
     color: #d10606;
     align-items: top;
-}
-
-.design h3 {
-    padding: 5px;
-    margin: 0 90px;
-    border-radius: 6px;
-    color: var(--White);
-    background: #d10606;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.design h3 a {
-    text-decoration: none;
-    color: var(--White);
-    text-align: center;
-    align-items: center;
-}
-
-.design h3:hover {
-    color: #d10606;
-    margin: 0 50px;
-    font-size: 18px;
-    font-weight: bold;
-    background: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
 }
 
 .details {
