@@ -238,6 +238,8 @@ body {
     width: 100%;
     display: block;
     margin: 0 auto;
+    background-image: linear-gradient(45deg, rgba(0, 0, 255, 0.877), #000000e5, #000000e5, rgba(255, 217, 0, 0.897));
+    background-blend-mode: multiply;
   }
   
   .carousel-item {
@@ -254,12 +256,14 @@ body {
 
   .carousel-item h1 {
     position: absolute;
-    font-size: 50px;
+    font-size: 35px;
     color: var(--Gold);
     top: 100px;
     left: 50px;
     isolation: isolate;
     z-index: 10;
+    margin-left: -400px;
+    margin-top: 80px;
   }
 
   .arrow{
@@ -274,15 +278,17 @@ body {
   }
   
   .arrow-prev {
-    left: 30px;
+    left: -50px;
     position: absolute;
     top: 50%;
+    cursor: pointer;
   }
 
   .arrow-next {
-    right: 30px;
+    right: -50px;
     position: absolute;
     top: 50%;
+    cursor: pointer;
   }
 
   [id^= "item"] {
@@ -293,21 +299,33 @@ body {
     opacity: 1;
     background: url('../images/archi-slide.jpg');
     background-size: cover;
+    border-radius: 15px;
+    margin: 30px 500px;
+    margin-right: 100px;
   }
 
   .item-2 {
     background: url('../images/engine-slide.jpg');
     background-size: cover;
+    border-radius: 15px;
+    margin: 30px 500px;
+    margin-right: 100px;
   }
 
   .item-3 {
     background: url('../images/construction-slide.jpg');
     background-size: cover;
+    border-radius: 15px;
+    margin: 30px 500px;
+    margin-right: 100px;
   }
 
   .item-4 {
     background: url('../images/manage-slide.jpg');
     background-size: cover;
+    border-radius: 15px;
+    margin: 30px 500px;
+    margin-right: 100px;
   }
   
   *:target ~ .item-1{
@@ -531,13 +549,26 @@ body {
 .design h1 {
     padding: 5px;
     text-align: center;
+}
+
+.design h1 a {
+    text-decoration: none;
+    text-align: center;
     font-size: 22px;
     cursor: pointer;
     color: var(--Black);
+    transition: all 250ms ease-in-out;
+}
+
+.design h1 a:hover {
+    color: var(--Gold);
+    font-size: 21px;
+    text-shadow: 1px 1px 3px #000000;
 }
 
 .design h2 {
     padding: 1px;
+    margin-bottom: 10px;
     text-align: center;
     font-size: 10px;
     align-items: top;
@@ -1343,6 +1374,7 @@ body {
     width: 100%;
     padding: 10px 20px;
     margin: 5px auto;
+    background: var(--lite-Grey);
 }
 
 .designs h2 {
@@ -1353,32 +1385,51 @@ body {
 
 .design-links {
     width: 100%;
-    padding: 10px;
-    margin: 5px auto;
+    padding: 50px;
+    margin: 0 auto;
     background: url(../images/designs_background.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .links {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
-    padding: 5px;
+    flex-wrap: wrap;
+    padding: 35px 10px;
+    margin: auto;
+    margin: 10px;
     justify-content: center;
     border-radius: 6px;
-    background: rgba(0, 0, 0, 0.3);
+    background: #000000d7;
+    background-blend-mode: multiply;
 }
 
 .links a {
-    width: 45%;
-    color: var(--Grey);
-    margin: 5px;
-    padding: 10px 5px;
-    border: 1px solid var(--Gold);
+    flex-basis: 25%;
+    color: var(--Gold);
+    padding: 10px;
+    margin: 10px 30px;
+    border: 1px solid var(--lite-Grey);
     border-radius: 6px;
     font-size: 15px;
+    text-align: center;
+    justify-content: space-around;
     text-decoration: none;
-    background: var(--lite-Grey);
+    background-image: linear-gradient(60deg, #00000091, #dfb75869, #1ca2db7e, #fa934409);
+    background-blend-mode: multiply;
+    transition: all 250ms ease-in-out;
+}
+
+.links a:hover {
+    color: var(--lite-Grey);
+    border: 1px solid var(--Gold);
+    font-size: 16px;
+    text-align: center;
+    background: #f4f4f425;
+    background-blend-mode: multiply;
+    box-shadow: 2px 2px 3px var(--Black),
+                -4px -4px 7px var(--Black);
 }
 
 /* Architecture */

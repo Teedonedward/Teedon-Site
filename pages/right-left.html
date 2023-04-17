@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Right Left</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/81f98f93bc.js" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Comfortaa', cursive;
+        font-size: 12px;
+        color: var(--Grey);
+        background: var(--lite-Grey);
+    }
+
+    :root {
+        --Gold: #A57C00;
+        --White: #fff;
+        --Black: #000;
+        --Dark-Grey: #4f4f4f;
+        --lite-Grey: #f4f4f4;
+        --Grey: #555555;
+        --Transparent-Gold: rgba(165, 124, 0, 0.05);
+    }
+
+    .header {
+        display: flex;
+        top: 0;
+        width: 100%;
+        height: 65px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        background: var(--Dark-Grey);
+        box-shadow: 0 3px 5px var(--Black);
+        z-index: 10;
+    }
+
+    .site-logo {
+        width: 100px;
+        float: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-left: 0;
+    }
+
+    .site-logo img {
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar {
+        display: flex;
+        margin: 0px auto;
+        margin-right: 0;
+    }
+
+    .navbar ul {
+        display: flex;
+        width: 550px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        padding: 10px;
+        list-style-type: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar ul li a {
+        color: var(--White);
+        font-weight: bold;
+        font-size: 10px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .navbar ul li a:hover {
+        color: var(--Gold);
+        font-size: 11px;
+        cursor: pointer;
+        padding: 11px;
+        border-radius: 6px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
+        transition: all 400ms ease-in-out;
+    }
+
+    .fa-solid {
+        color: var(--Gold);
+        font-size: 20px;
+    }
+
+    .fa-brands {
+        color: var(--Gold);
+        font-size: 20px;
+    }
+
+    .product-slider {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .product-images {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .product-images img {
+        width: 100%;
+        transition: all 0.15s ease;
+    }
+
+    .product-images input {
+        display: none;
+    }
+
+    .product-navigation {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+    }
+
+    .product-navigation label {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        border: solid var(--Gold) 1px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+        margin: 5px;
+    }
+
+    .product-navigation label:hover {
+        background: var(--Gold);
+    }
+
+    #img1:checked~.m1 {
+        margin-left: -100%;
+    }
+
+    #img2:checked~.m2 {
+        margin-left: -200%;
+    }
+
+    #img3:checked~.m3 {
+        margin-left: -300%;
+    }
+
+    #img4:checked~.m4 {
+        margin-left: -400%;
+    }
+
+    .design-description {
+        width: 80%;
+        margin: auto;
+        background: var(--lite-Grey);
+    }
+
+    .design-description h1 {
+        color: var(--Dark-Grey);
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .design-specs {
+        display: flex;
+        width: 100%;
+        margin: 10px auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .area,
+    .number-of-rooms,
+    .number-of-bathrooms,
+    .others,
+    .type {
+        background-image: linear-gradient(45deg, #0000001f, #dfb75818, #1ca2db07, #fa934409);
+        mix-blend-mode: multiply;
+        color: var(--Gold);
+        border-radius: 6px;
+        padding: 10px;
+        margin: auto;
+        margin: 10px 5px;
+        font-size: 12px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-shadow: 2px 2px 4px var(--Grey);
+    }
+
+    .download {
+        width: 30%;
+        font-size: 12px;
+        color: var(--White);
+        background: #d10606;
+        border-radius: 6px;
+        padding: 10px;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        transition: all 250ms ease-in-out;
+    }
+
+    .download:hover {
+        font-size: 13px;
+        color: var(--Gold);
+        background: var(--Dark-Grey);
+        padding: 12px;
+        margin: 0 auto;
+        box-shadow: 1px 1px 3px var(--Black),
+        -1px -2px 5px var(--Black);
+    }
+
+    .design-info {
+        width: 80%;
+        color: var(--Dark-Grey);
+        font-size: 15px;
+        justify-content: center;
+        text-align: justify;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .formats {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        padding: 5px;
+        padding-bottom: 0;
+        border-top: 2px solid var(--Gold);
+    }
+
+    .checkbox-item {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .checkbox p {
+        color: var(--White);
+        align-items: center;
+    }
+
+    .check,
+    .checkbox,
+    .check {
+        width: 15px;
+        height: 15px;
+        position: relative;
+        display: block;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .check input[type="checkbox"],
+    .checkbox .check input[type="checkbox"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    .check .checkmark,
+    .checkbox .check .checkmark {
+        width: 15px;
+        height: 15px;
+        border: 1px solid var(--Gold);
+        border-radius: 6px;
+        display: block;
+        position: relative;
+        background: var(--White);
+    }
+
+    .check .checkmark:before,
+    .checkbox .check .checkmark:before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 5px;
+        height: 2px;
+        border: 1px solid;
+        border-color: transparent transparent var(--Gold) var(--Gold);
+        transform: rotate(-30deg);
+        display: none;
+    }
+
+    .check input[type="checkbox"]:checked~.checkmark,
+    .checkbox .check input[type="checkbox"]:checked~.checkmark {
+        background: var(--lite-Grey);
+    }
+
+    .check input[type="checkbox"]:checked~.checkmark:before,
+    .checkbox .check input[type="checkbox"]:checked~.checkmark:before {
+        display: block;
+    }
+
+    .images-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "image1 image2 image3 image4";
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .images img {
+        width: 100%;
+    }
+
+    .notice {
+        display: flex;
+        width: 80%;
+        margin: 10px auto;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .notice span {
+        color: red;
+        font-size: 15px;
+        margin-right: 3px;
+    }
+
+    .notice p {
+        color: var(--Grey);
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: url(../images/footer.jpg);
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .footer_sd {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "reach-out explore follow-us"
+            "copyright copyright copyright";
+        width: 100%;
+        padding-top: 30px;
+        background: rgba(0, 0, 0, 0.85);
+    }
+
+    .reach-out {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 50px;
+        margin: 10px;
+    }
+
+    .reach-out li {
+        display: block;
+        list-style-type: none;
+        padding: 5px 0;
+    }
+
+    .reach-out li a {
+        text-decoration: none;
+        color: var(--White);
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .explore {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 10px;
+    }
+
+    .explore li {
+        display: block;
+        list-style-type: none;
+        padding: 5px 0;
+    }
+
+    .explore li a {
+        text-decoration: none;
+        color: var(--White);
+        padding: 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .follow-us {
+        width: 100%;
+        margin: 10px;
+        padding-right: 50px;
+    }
+
+    .follow-us p {
+        color: var(--White);
+        font-size: 15px;
+    }
+
+    .follow-us ul {
+        display: flex;
+        flex-direction: row;
+        padding: 5px 0;
+    }
+
+    .follow-us li {
+        list-style-type: none;
+        float: left;
+    }
+
+    .follow-us li a {
+        text-decoration: none;
+        color: var(--White);
+        padding: 5px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .fa-brands {
+        color: var(--Gold);
+        font-size: 30px;
+    }
+
+    .copyright {
+        grid-area: copyright;
+        background: rgba(0, 0, 0, 0.);
+        border-top: 1px solid var(--Gold);
+        color: var(--Gold);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="site-logo">
+            <a href="../index.html">
+                <img src="../images/logo.jpg" alt="Teedon logo" />
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="engineering.html">Engineering</a></li>
+                <li><a href="construction.html">Construction</a></li>
+                <li><a href="about_us.html">Projects</a></li>
+                <li><a href="work_with_us.html">Blog</a></li>
+                <li><a href="sign-In">Sign In</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="product-slider">
+        <div class="product-images">
+            <input type="radio" name="slide" id="img1" checked>
+            <input type="radio" name="slide" id="img2">
+            <input type="radio" name="slide" id="img3">
+            <input type="radio" name="slide" id="img4">
+
+            <img src="../images/designs/Right-left/Right-Left-3D View 4.jpg" class="m1" alt="img1">
+            <img src="../images/designs/Right-left/Right_Left-3D View 3.jpg" class="m2" alt="img2">
+            <img src="../images/designs/Right-left/Right_Left-3D View 2.jpg" class="m3" alt="img3">
+            <img src="../images/designs/Right-left/Right-Left-3D View 5.jpg" class="m4" alt="img4">
+        </div>
+        <div class="product-navigation">
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+            <label for="img4"></label>
+        </div>
+    </div>
+    <div class="design-description">
+        <h1>Right Left</h1>
+        <div class="design-specs">
+            <h2 class="area">650m²</h2>
+            <h2 class="number-of-rooms">5 Bedrooms</h2>
+            <h2 class="number-of-bathrooms">7½ Bathrooms</h2>
+            <h2 class="others">Staff Quaters</h2>
+            <h2 class="number-of-rooms">Garage</h2>
+            <h2 class="number-of-bathrooms">Indoor/Outdoor pool</h2>
+            <h2 class="others">Cinema/Suana</h2>
+            <h2 class="type">1 Storey</h2>
+        </div>
+        <div class="download">
+            <h2>Buy Design</h2>
+        </div>
+        <div class="design-info">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quasi expedita a adipisci ad beatae,
+                autem mollitia vel quo, veniam accusamus quam tempore dolore error animi porro id, neque libero.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quasi expedita a adipisci ad beatae,
+                autem mollitia vel quo, veniam accusamus quam tempore dolore error animi porro id, neque libero.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quasi expedita a adipisci ad beatae,
+                autem mollitia vel quo, veniam accusamus quam tempore dolore error animi porro id, neque libero.
+            </p>
+        </div>
+        <div class="formats">
+            <div class="checkbox-item">
+                <label class="check">
+                    <input type="checkbox" name="architectural-drawings" id="architectural-drawings"
+                        value="architectural-drawings" />
+                    <span class="checkmark"></span>
+                </label>
+                <p>
+                    Architectural Drawings
+                </p>
+            </div>
+            <div class="checkbox-item">
+                <label class="check">
+                    <input type="checkbox" name="engineering-drawings-calculation-sheets"
+                        id="engineering-drawings-calculation-sheets" value="engineering-drawings-calculation-sheets" />
+                    <span class="checkmark"></span>
+                </label>
+                <p>
+                    Engineering Drawings & Calculation sheets
+                </p>
+            </div>
+            <div class="checkbox-item">
+                <label class="check">
+                    <input type="checkbox" name="mechanical-drawings" id="mechanical-drawings"
+                        value="mechanical-drawings" />
+                    <span class="checkmark"></span>
+                </label>
+                <p>
+                    Mechanical Drawings
+                </p>
+            </div>
+            <div class="checkbox-item">
+                <label class="check">
+                    <input type="checkbox" name="electrical-drawings" id="electrical-drawings"
+                        value="electrical-drawings" />
+                    <span class="checkmark"></span>
+                </label>
+                <p>
+                    Electrical Drawings
+                </p>
+            </div>
+            <div class="checkbox-item">
+                <label class="check">
+                    <input type="checkbox" name="plumbing-drawings" id="plumbing-drawings" value="plumbing-drawings" />
+                    <span class="checkmark"></span>
+                </label>
+                <p>
+                    Plumbing Drawings
+                </p>
+            </div>
+            <div class="checkbox-item">
+                <label class="check">
+                    <input type="checkbox" name="hvac" id="hvac" value="hvac" />
+                    <span class="checkmark"></span>
+                </label>
+                <p>
+                    HVAC
+                </p>
+            </div>
+            <div class="checkbox-item">
+                <label class="check">
+                    <input type="checkbox" name="rvt" id="rvt" value="rvt" />
+                    <span class="checkmark"></span>
+                </label>
+                <p>
+                    Revit format (rvt)
+                </p>
+            </div>
+            <div class="checkbox-item">
+                <label class="check">
+                    <input type="checkbox" name="dwg" id="dwg" value="dwg" />
+                    <span class="checkmark"></span>
+                </label>
+                <p>
+                    AutoCAD format (dwg)
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="images-container">
+        <div class="images">
+            <img class="image1" src="../images/designs/Right-left/right-left.jpg"
+                alt="Right Left">
+            <img class="image2" src="../images/designs/Right-left/Right_Left-3D View 2.jpg"
+                alt="Right Left">
+            <img class="image3" src="../images/designs/Right-left/Right_Left-3D View 3.jpg"
+                alt="Right Left">
+            <img class="image4" src="../images/designs/Right-left/Right-Left-3D View 4.jpg"
+                alt="Right Left">
+        </div>
+    </div>
+    <div class="notice">
+        <span>Note:</span>
+        <p>All designs by default comes with, Plans, Elevations, Sections, Details, Door/Window schedules and at least
+            three 3D renderings. All other drawing formats including Engineering, Mechanical, Electrical, Plumbing, HVAC
+            and CAD formats are provided at additional cost </p>
+    </div>
+    <div class="footer">
+        <div class="footer_sd">
+            <div class="reach-out">
+                <ul>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="work_with_us.html">Work with Us</a></li>
+                </ul>
+            </div>
+            <div class="explore">
+                <ul>
+                    <li><a href="projects">Projects</a></li>
+                    <li><a href="blogs">Blogs</a></li>
+                    <li><a href="terms_and_conditions">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="follow-us">
+                <p>
+                    Follow us on our social media platforms
+                </p>
+                <ul>
+                    <li><a href="https://facebook.com/teedonedward"><i class="fa-brands fa-facebook-square"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/teedon_org"><i class="fa-brands fa-twitter-square"></i></a></li>
+                    <li><a href="https://instagram.com/teedonedward"><i class="fa-brands fa-instagram-square"></i></a>
+                    </li>
+                    <li><a href="https://YouTube.com/channel/UCkNGil3huxYkQK-cvjjA9vw"><i
+                                class="fa-brands fa-youtube-square"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>
+                    Teedon© 2022
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
