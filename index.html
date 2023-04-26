@@ -34,34 +34,8 @@
         </div>
         <div class="search-bar">
             <input id="search" type="text" placeholder="Search for plans & designs..." />
-            <a id="search-btn" class="Search-btn" href="#" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a id="search-btn" class="Search-btn" href="#" onkeyup="search()"><i class="fa-solid fa-magnifying-glass"></i></a>
             <ul id="suggestions"></ul>
-        </div>
-        <div class="carousel-wrapper">
-            <span id="item-1"></span>
-            <span id="item-2"></span>
-            <span id="item-3"></span>
-            <span id="item-4"></span>
-            <div class="carousel-item item-1">
-                <a href="#item-4" class="arrow-prev arrow"></a>
-                <h1>Architecture</h1>
-                <a href="#item-2" class="arrow-next arrow"></a>
-            </div>
-            <div class="carousel-item item-2">
-                <a href="#item-1" class="arrow-prev arrow"></a>
-                <h1>Engineering</h1>
-                <a href="#item-3" class="arrow-next arrow"></a>
-            </div>
-            <div class="carousel-item item-3">
-                <a href="#item-2" class="arrow-prev arrow"></a>
-                <h1>Construction</h1>
-                <a href="#item-4" class="arrow-next arrow"></a>
-            </div>
-            <div class="carousel-item item-4">
-                <a href="#item-3" class="arrow-prev arrow"></a>
-                <h1>Project Management</h1>
-                <a href="#item-1" class="arrow-next arrow"></a>
-              </div>
         </div>
         <div class="intro-text">
             <div><p>Teedon offers truely unique Architectural designs as well as Construction, Engineering and Project Management services.</p>
@@ -69,6 +43,36 @@
             <div class="text-img">
                 <img src="images/work_with_us.jpg" alt="" />
             </div>
+        </div>
+        <div class="carousel-wrapper">
+            <div class="carousel-item item-1">
+                <h1>Architecture</h1>
+                <a href="#item-4" class="arrow-prev arrow"></a>
+                <span id="item-1"></span>
+                <img src="images/archi-slide.jpg" alt="">
+                <a href="#item-2" class="arrow-next arrow"></a>
+            </div>
+            <div class="carousel-item item-2">
+                <h1>Engineering</h1>
+                <a href="#item-1" class="arrow-prev arrow"></a>
+                <span id="item-2"></span>
+                <img src="images/engine-slide.jpg" alt="">
+                <a href="#item-3" class="arrow-next arrow"></a>
+            </div>
+            <div class="carousel-item item-3">
+                <h1>Construction</h1>
+                <a href="#item-2" class="arrow-prev arrow"></a>
+                <span id="item-3"></span>
+                <img src="images/construction-slide.jpg" alt="">
+                <a href="#item-4" class="arrow-next arrow"></a>
+            </div>
+            <div class="carousel-item item-4">
+                <h1>Project Management</h1>
+                <a href="#item-3" class="arrow-prev arrow"></a>
+                <span id="item-4"></span>
+                <img src="images/manage-slide.jpg" alt="">
+                <a href="#item-1" class="arrow-next arrow"></a>
+              </div>
         </div>
         <div class="things_we_do">
                 <div class="plan-design">
