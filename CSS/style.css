@@ -150,7 +150,7 @@ body {
   background: var(--Lite-Grey);
 }
 
-.search-bar input {
+.search-input {
   border-radius: 10px;
   color: var(--Gold);
   font-size: 12px;
@@ -167,18 +167,20 @@ body {
   transition: all 200ms ease-in-out;
 }
 
-.search-bar input:focus {
+.search-input:focus {
   font-size: 13px;
   letter-spacing: 0.2em;
   border: 1px solid var(--Gold);
   box-shadow: inset 2px 2px 5px #000;
 }
 
-.search-bar a {
+.search {
   color: var(--White);
   position: right;
+  outline: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  border: none;
   border-left: solid 1px var(--Gold);
   height: 40px;
   width: 40px;
@@ -188,10 +190,9 @@ body {
   text-align: center;
   margin-left: -50px;
   transition: all 250ms ease-in-out;
-  /*border: 1px solid var(--Dark-Grey);*/
 }
 
-.search-bar i {
+.search i {
   color: var(--White);
   font-size: 20px;
   text-align: center;
@@ -199,31 +200,13 @@ body {
   margin-top: 10px;
 }
 
-.search-bar a:hover {
+.search:hover {
   color: var(--Gold);
   background: var(--Dark-Grey);
 }
 
-#suggestions {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  background-color: #f1f1f1;
-  width: 100%;
-  max-height: 200px;
-  overflow-y: auto;
-  box-shadow: 3px 3px 2px rgba(94, 104, 123, 0.288),
-    -0.5px -0.5px 2px var(--Grey);
-}
-
-#suggestions li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-#suggestions li:hover {
-  background-color: #ddd;
+.hide {
+    display: none;
 }
 
 .fa-solid, .fa-regular {
@@ -480,7 +463,7 @@ body {
     background-blend-mode: multiply;
 }
 
-.designed {
+#designed {
     display: flex;
     overflow-x: auto;
 }
@@ -538,27 +521,33 @@ body {
     box-shadow: 0px 2px 5px var(--Black);
 }
 
-.design h1 {
-    padding: 5px;
+.container {
+    width: 100%;
+    margin: 10px auto;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.design h1 a {
+.title {
     text-decoration: none;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-size: 22px;
+    font-size: 14px;
+    padding: 5px;
     cursor: pointer;
     color: var(--Black);
     transition: all 250ms ease-in-out;
 }
 
-.design h1 a:hover {
+.title:hover {
     color: var(--Gold);
-    font-size: 21px;
+    font-size: 13px;
     text-shadow: 1px 1px 3px #000000;
 }
 
-.design h2 {
+.price-tag {
     padding: 1px;
     margin-bottom: 10px;
     text-align: center;
@@ -567,32 +556,16 @@ body {
     justify-content: center;
 }
 
-.design h2 i {
+.price-tag i {
     font-size: 16px;
     color: rgba(0, 0, 0, 0.7);
     padding-right: 0.1em;
 }
 
-.design h2 span {
+.price-tag span {
     font-size: 15px;
     color: #d10606;
     align-items: top;
-}
-
-.details {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0 auto;
-    padding: 5px;
-}
-
-.details h4 {
-    flex-basis: 2;
-    padding: 5px 10px;
-    line-height: 20px;
-    color: var(--Grey);
-    text-align: left;
 }
 
 .more {
@@ -867,27 +840,82 @@ body {
 
 @media (max-width: 991px)
 {
-    #services {
-        display: grid;
+    .header {
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        height: 45px;
-        list-style-type: none;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 5px;
+        margin: 0 auto;
+        padding: 80px 20px;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid var(--Gold);
+        box-shadow: 0px 1px 3px var(--Black);
+    }
+    
+    .site-logo {
+        width: 70px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .site-logo img {
+        width: 100%;
+        margin: auto;
         justify-content: center;
         align-items: center;
     }
-
-    #services li {
-        background: var(--lite-Grey);
-        text-align: center;
-        box-shadow: -0.5px -0.5px 5px rgba(255,255,255,1), 0.5px 0.5px 5px rgba(104, 104, 104, 0.8)
+    
+    .navbar {
+        display: flex;
+        margin: 0px auto;
+        padding: 10px 20px;
+        margin-right: 250px;
+    }
+    
+    .navbar ul {
+        display: flex;
+        width: 200px;
+        margin: 0 auto;
+        align-items: center;
     }
 
-    #services li:hover {
-        background: var(--Grey);
-        color: var(--Gold);
-        transition: all 0.5s ease-in;
+    .navbar ul li {
+        padding: 10px;
+        border-radius: 15px;
+        border: 1px solid var(--Gold);
+    }
+
+    .search-bar {
+        margin: 10px;
+    }
+
+    .search-bar input {
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        height: 35px;
+        padding: 8px;
+        outline: none;
+        transition: all 200ms ease-in-out;
+    }
+      
+    .search-bar input:focus {
+        font-size: 11px;
+    }
+      
+    .search-bar a {
+        height: 35px;
+        width: 35px;
+        margin-left: -45px;
+        transition: all 250ms ease-in-out;
+    }
+      
+    .search-bar i {
+        color: var(--White);
+        font-size: 20px;
+        text-align: center;
+        text-shadow: 1px 1px 3px var(--Black);
+        margin-top: 10px;
     }
 
     .intro-text {
@@ -897,7 +925,7 @@ body {
         padding: 20px;
         justify-content: center;
         align-items: center;
-        font-size: 14px;
+        font-size: 10px;
         line-height: 18px;
         text-align: justify;
         margin: 0 auto;
@@ -911,19 +939,77 @@ body {
         margin: 0;
         background: var(--lite-Grey);
     }
+    
+    .featured-designs h1 {
+        width: 100%;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .designed {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    
+    .featured-designs span {
+        color: var(--Dark-Grey);
+        margin: 0 auto;
+        font-size: 15px;
+        padding: 0 10px 10px 10px;
+    }
+    
+    .featured-designs p {
+        color: var(--Dark-Grey);
+        margin-top: 5px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        padding-left: 20px;
+    }
+    
+    .design {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        justify-content: center;
+        margin: 0 auto;
+        margin: 15px 50px;
+        transition: all 250ms ease-in-out;
+    }
+    
+    .design:hover {
+        width: 70%;
+        margin: 0 auto;
+        margin: 10px 45px;
+        border: 1px solid var(--Gold);
+        border-radius: 15px;
+        background: var(--lite-Grey);
+        box-shadow: 1px 2px 5px var(--Black),
+                    -1px -1px 5px var(--Black);
+    }
+    
+    .design img {
+        width: 100%;
+    }
 
-    .design h2 {
-        padding: 5px;
-        font-size: 10px;
-        margin: 5px 160px;
+    .container {
+        width: 100%;
+        margin: 10px auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
-    
-    .design h2 span:nth-child(1) {
-        font-size: 35px;
+
+    .bottom-content {
+        font-size: 12px;
     }
-    
-    .design h2 span:nth-child(2) {
-        font-size: 35px;
+
+    .b-content .button a {
+        font-size: 12px;
     }
 
     .email-subscription {
@@ -933,8 +1019,24 @@ body {
         grid-template-areas:
         "email-text email-text email-text"
         "enter-email enter-email submit";
-        padding: 20px;
-    } 
+        padding: 10px;
+    }
+    
+    .email-text {
+        padding: 0px 10px 10px 10px;
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    .enter-email {
+        grid-area: enter-email;
+        font-size: 12px;
+        width: 100%;
+    }
+    
+    .submit {
+        font-size: 12px;
+    }
 
     .header {
         height: 45px;
@@ -955,12 +1057,24 @@ body {
         padding-left: 10px;
     }
 
+    .reach-out li a {
+        font-size: 12px;
+    }
+
     .explore {
         padding-left: 10px;
     }
 
+    .explore li a {
+        font-size: 12px;
+    }
+
     .follow-us {
         padding-left: 20px;
+    }
+
+    .follow-us li a {
+        font-size: 15px;
     }
 
     .copyright {
@@ -972,6 +1086,7 @@ body {
         text-align: center;
         padding: 10px;
         margin-top: 20px;
+        font-size: 10px;
     }
 }
 
