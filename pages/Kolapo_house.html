@@ -3,11 +3,12 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Container House</title>
+    <title>Kolapo House</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/81f98f93bc.js" crossorigin="anonymous"></script>
+    <script defer src="../Scripts/alert.js"></script>
 </head>
 <style type="text/css">
     * {
@@ -209,15 +210,22 @@
 
     .download {
         width: 30%;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .download a {
+        text-decoration: none;
         font-size: 12px;
+        padding: 10px 50px;
         color: var(--White);
         background: #d10606;
         border-radius: 6px;
-        padding: 10px;
-        margin: 0 auto;
-        justify-content: center;
         text-align: center;
         cursor: pointer;
+        margin: 0 auto;
+        justify-content: center;
         transition: all 250ms ease-in-out;
     }
 
@@ -241,83 +249,6 @@
         padding: 10px;
     }
 
-    .formats {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        margin: 0 auto;
-        margin-bottom: 20px;
-        padding: 5px;
-        padding-bottom: 0;
-        border-top: 2px solid var(--Gold);
-    }
-
-    .checkbox-item {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        padding: 5px;
-    }
-
-    .checkbox p {
-        color: var(--White);
-        align-items: center;
-    }
-
-    .check,
-    .checkbox,
-    .check {
-        width: 15px;
-        height: 15px;
-        position: relative;
-        display: block;
-        cursor: pointer;
-        margin: 5px;
-    }
-
-    .check input[type="checkbox"],
-    .checkbox .check input[type="checkbox"] {
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-    }
-
-    .check .checkmark,
-    .checkbox .check .checkmark {
-        width: 15px;
-        height: 15px;
-        border: 1px solid var(--Gold);
-        border-radius: 6px;
-        display: block;
-        position: relative;
-        background: var(--White);
-    }
-
-    .check .checkmark:before,
-    .checkbox .check .checkmark:before {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 5px;
-        height: 2px;
-        border: 1px solid;
-        border-color: transparent transparent var(--Gold) var(--Gold);
-        transform: rotate(-30deg);
-        display: none;
-    }
-
-    .check input[type="checkbox"]:checked~.checkmark,
-    .checkbox .check input[type="checkbox"]:checked~.checkmark {
-        background: var(--lite-Grey);
-    }
-
-    .check input[type="checkbox"]:checked~.checkmark:before,
-    .checkbox .check input[type="checkbox"]:checked~.checkmark:before {
-        display: block;
-    }
-
     .images-container {
         width: 100%;
         margin-top: 10px;
@@ -335,26 +266,6 @@
 
     .images img {
         width: 100%;
-    }
-
-    .notice {
-        display: flex;
-        width: 80%;
-        margin: 10px auto;
-        padding: 10px;
-        justify-content: center;
-    }
-
-    .notice span {
-        color: red;
-        font-size: 15px;
-        margin-right: 3px;
-    }
-
-    .notice p {
-        color: var(--Grey);
-        font-size: 12px;
-        text-align: justify;
     }
 
     .footer {
@@ -514,7 +425,7 @@
             <h2 class="type">1 Storey</h2>
         </div>
         <div class="download">
-            <h2>Buy Design</h2>
+            <a href="" onclick="contact()">Buy</a>
         </div>
         <div class="design-info">
             <p>
@@ -534,12 +445,6 @@
             <img class="image4" src="../images/sale/1/IMG-20230628-WA0074.jpg"
                 alt="Container_home-3d view 2">
         </div>
-    </div>
-    <div class="notice">
-        <span>Note:</span>
-        <p>All designs by default comes with, Plans, Elevations, Sections, Details, Door/Window schedules and at least
-            three 3D renderings. All other drawing formats including Engineering, Mechanical, Electrical, Plumbing, HVAC
-            and CAD formats are provided at additional cost </p>
     </div>
     <div class="footer">
         <div class="footer_sd">
