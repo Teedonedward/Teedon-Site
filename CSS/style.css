@@ -468,6 +468,69 @@ body {
     overflow-x: auto;
 }
 
+#for-sell {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    margin: 10px auto;
+    padding-left: 25px;
+}
+
+.sale-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 10px;
+    margin-top: 0;
+    padding-top: 0;
+    background-color: #2b2b2b53;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 250ms ease-in-out;
+}
+
+.sale-container:hover {
+    border: 1px solid var(--Gold);
+    box-shadow: 2px 2px 5px #000;
+}
+
+.sale-container img {
+    width: 100%;
+    height: 210px;
+    background-size: cover;
+    margin-top: 0;
+    padding-top: 0;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px #000;
+}
+
+.sale-container a {
+    text-decoration: none;
+    margin: 5px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    color: var(--Gold);
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+    transition: all 250ms ease-in-out;
+}
+
+.sale-container a:hover {
+    font-size: 17px;
+    color: red;
+    text-shadow: none;
+}
+
+.sale-container p {
+    color: red;
+    padding: 5px;
+    font-weight: bold;
+}
+
 .featured-designs span {
     color: var(--Dark-Grey);
     margin: 0 auto;
