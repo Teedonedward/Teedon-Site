@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/81f98f93bc.js" crossorigin="anonymous"></script>
+    <script defer src="../Scripts/slider.js"></script>
 </head>
 <style type="text/css">
     * {
@@ -101,83 +102,100 @@
         transition: all 400ms ease-in-out;
     }
 
-    .fa-solid {
-        color: var(--Gold);
-        font-size: 20px;
+    .slider {
+        width: 100%;
+        height: 435px;
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(180deg, var(--Gold), white);
     }
 
-    .fa-brands {
-        color: var(--Gold);
-        font-size: 20px;
+    .design-name {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .product-slider {
+    .design-name h1 {
+        color: var(--White);
+        font-size: 45px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 2px 2px 3px var(--Black);
+    }
+
+    .photos {
         position: relative;
+        margin: auto;
+        width: 80%;
+        height: auto;
+    }
+
+    .photos ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .photos li {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        object-fit: cover;
+        object-position: center;
+        transform: translate(-50%, 10%);
+        transition: opacity 250ms ease-in-out;
+        transition-delay: 250ms;
+    }
+
+    .photos li[data-active] {
+        opacity: 1;
+        z-index: 1;
+        transition-delay: 0ms;
+    }
+
+    .photos img {
         width: 100%;
-        overflow: hidden;
+        margin: auto;
+        box-shadow: 4px 4px 8px var(--Black),
+                    -3px -3px 5px var(--Black);
     }
 
-    .product-images {
-        display: flex;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .product-images img {
-        width: 100%;
-        transition: all 0.15s ease;
-    }
-
-    .product-images input {
-        display: none;
-    }
-
-    .product-navigation {
-        display: flex;
-        justify-content: center;
-        margin: 5px;
-    }
-
-    .product-navigation label {
-        height: 10px;
-        width: 10px;
-        border-radius: 50%;
-        border: solid var(--Gold) 1px;
+    .photo-button {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        font-size: 35px;
         cursor: pointer;
-        transition: all 0.15s ease;
-        margin: 5px;
+        color: black;
+        background: rgba(255, 255, 255, 0.2);
+        background-blend-mode: multiply;
+        border: none;
+        border-radius: 50%;
     }
 
-    .product-navigation label:hover {
-        background: var(--Gold);
+    .photo-button:hover, .photo-button:focus {
+        color: brown;
+        outline:1px solid rgba(165, 42, 42, 0.75);
     }
 
-    #img1:checked~.m1 {
-        margin-left: -100%;
+    .photo-button.prev {
+        left: 20px;
     }
 
-    #img2:checked~.m2 {
-        margin-left: -200%;
-    }
-
-    #img3:checked~.m3 {
-        margin-left: -300%;
-    }
-
-    #img4:checked~.m4 {
-        margin-left: -400%;
+    .photo-button.next {
+        right: 20px;
     }
 
     .design-description {
+        position: relative;
         width: 80%;
         margin: auto;
         background: var(--lite-Grey);
-    }
-
-    .design-description h1 {
-        color: var(--Dark-Grey);
-        text-align: center;
-        margin: 10px 0;
     }
 
     .design-specs {
@@ -485,28 +503,30 @@
             </ul>
         </nav>
     </div>
-    <div class="product-slider">
-        <div class="product-images">
-            <input type="radio" name="slide" id="img1" checked>
-            <input type="radio" name="slide" id="img2">
-            <input type="radio" name="slide" id="img3">
-            <input type="radio" name="slide" id="img4">
-
-            <img src="../images/designs/french_quatres.jpg" class="m1" alt="img1">
-            <img src="../images/designs/Modern_country_home/modern_country_home_3d-1.jpg" class="m2" alt="img2">
-            <img src="../images/designs/Modern_country_home/modern_country_home_approach-view.jpg" class="m3"
-                alt="img3">
-            <img src="../images/designs/Modern_country_home/modern_country_home_3d-2.jpg" class="m4" alt="img4">
+    <div class="slider">
+        <div class="design-name">
+            <h1>Penthouse Suite</h1>
         </div>
-        <div class="product-navigation">
-            <label for="img1"></label>
-            <label for="img2"></label>
-            <label for="img3"></label>
-            <label for="img4"></label>
+        <div class="photos" data-photo>
+            <button class="photo-button prev" data-photos-button="prev">&#8656;</button>
+            <button class="photo-button next" data-photos-button="next">&#8658;</button>
+            <ul data-slides>
+                <li data-active>
+                    <img src="../images/designs/french_quatres.jpg" alt="image 1">
+                </li>
+                <li>
+                    <img src="../images/designs/modern_country_home.jpg" alt="image 2">
+                </li><li>
+                    <img src="../images/designs/health_center.jpg" alt="image 3">
+                </li><li>
+                    <img src="../images/designs/masonry.jpg" alt="image 4">
+                </li><li>
+                    <img src="../images/designs/classic_bungalow.jpg" alt="image 5">
+                </li>
+            </ul>
         </div>
     </div>
     <div class="design-description">
-        <h1>Penthouse Suite</h1>
         <div class="design-specs">
             <h2 class="area">350m²</h2>
             <h2 class="number-of-rooms">4 Bedrooms</h2>
@@ -662,5 +682,4 @@
         </div>
     </div>
 </body>
-
 </html>
